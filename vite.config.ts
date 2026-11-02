@@ -8,4 +8,10 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'lib/main.ts'),
+      formats: ['es']
+    }
+  }
 })

@@ -7,6 +7,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@/lib": [
+        "./lib/*"
       ]
     },
     "types": ["node"],
@@ -33,7 +36,8 @@
     "node_modules"
   ],
   "include": [
-    "src"
+    "src",
+    "lib"
   ],
   "references": [
     {
