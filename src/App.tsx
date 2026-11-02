@@ -1,16 +1,17 @@
 import {
   Box,
-  Button,
-  Checkbox,
   ClientOnly,
   HStack,
   Heading,
-  Progress,
-  RadioGroup,
   Skeleton,
   VStack,
 } from "@chakra-ui/react"
-import { ColorModeToggle } from "./components/color-mode-toggle"
+
+import { ColorModeToggle } from "@lib/color-mode-toggle"
+import { Button } from "@lib/button"
+import { Checkbox } from "@lib/checkbox"
+import { Progress } from "@lib/progress"
+import { RadioGroup } from "@lib/radio-group"
 
 export default function Page() {
   return (
@@ -22,38 +23,11 @@ export default function Page() {
         </Heading>
 
         <HStack gap="10">
-          <Checkbox.Root defaultChecked>
-            <Checkbox.HiddenInput />
-            <Checkbox.Control>
-              <Checkbox.Indicator />
-            </Checkbox.Control>
-            <Checkbox.Label>Checkbox</Checkbox.Label>
-          </Checkbox.Root>
-
-          <RadioGroup.Root display="inline-flex" defaultValue="1">
-            <RadioGroup.Item value="1" mr="2">
-              <RadioGroup.ItemHiddenInput />
-              <RadioGroup.ItemControl>
-                <RadioGroup.ItemIndicator />
-              </RadioGroup.ItemControl>
-              <RadioGroup.ItemText lineHeight="1">Radio</RadioGroup.ItemText>
-            </RadioGroup.Item>
-
-            <RadioGroup.Item value="2">
-              <RadioGroup.ItemHiddenInput />
-              <RadioGroup.ItemControl>
-                <RadioGroup.ItemIndicator />
-              </RadioGroup.ItemControl>
-              <RadioGroup.ItemText lineHeight="1">Radio</RadioGroup.ItemText>
-            </RadioGroup.Item>
-          </RadioGroup.Root>
+          <Checkbox>Checkbox</Checkbox>
+          <RadioGroup labels={['Radio 1', 'Radio 2']}/>
         </HStack>
 
-        <Progress.Root width="300px" value={65} striped>
-          <Progress.Track>
-            <Progress.Range />
-          </Progress.Track>
-        </Progress.Root>
+        <Progress width="300px" value={65}/>
 
         <HStack>
           <Button>Let's go!</Button>

@@ -6,8 +6,12 @@ import { defineConfig } from "vite"
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: {
-      "@chakra-ui/react": resolve("..", "..", "packages/react/src"),
-    },
+    tsconfigPaths: true,
   },
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'lib/main.ts'),
+      formats: ['es']
+    }
+  }
 })
