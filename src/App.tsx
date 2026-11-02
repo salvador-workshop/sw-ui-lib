@@ -10,7 +10,7 @@ import {
   Skeleton,
   VStack,
 } from "@chakra-ui/react"
-import { ColorModeToggle } from "../lib/color-mode-toggle"
+import { ColorModeToggle } from "@lib/color-mode-toggle"
 
 export default function Page() {
   return (
