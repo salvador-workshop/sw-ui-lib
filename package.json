@@ -1,6 +1,6 @@
 {
   "name": "sw-ui-lib",
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.2-alpha.1",
   "description": "sw-ui-lib",
   "scripts": {
     "dev": "vite",
@@ -8,11 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "workspace:*",
-    "react-icons": "5.6.0",
-    "react": "^19.2.1",
+    "@chakra-ui/react": "^3.37.0",
+    "@emotion/react": "^11.14.0",
     "next-themes": "^0.4.6",
-    "react-dom": "^19.2.1"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-icons": "^5.6.0"
   },
   "devDependencies": {
     "@types/react": "19.2.17",
