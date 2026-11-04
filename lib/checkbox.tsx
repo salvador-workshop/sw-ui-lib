@@ -4,9 +4,11 @@ import {
 
 export function Checkbox({
     children,
+    defaultChecked,
 }) {
+    const defChecked = !!defaultChecked
     return (
-        <ChakraCheckbox.Root defaultChecked>
+        <ChakraCheckbox.Root defaultChecked={defChecked}>
             <ChakraCheckbox.HiddenInput />
             <ChakraCheckbox.Control>
                 <ChakraCheckbox.Indicator />
